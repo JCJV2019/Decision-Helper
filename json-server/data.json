@@ -1,0 +1,84 @@
+{
+  "positivos": [
+    {
+      "id": "1",
+      "desc": "El curso es Innovadosso",
+      "point": 1
+    },
+    {
+      "id": "iONLPNs",
+      "desc": "Giacomo6fgsdfg444",
+      "point": 4
+    },
+    {
+      "id": "20327156303331177619571525551",
+      "desc": "Prometeo",
+      "point": "4"
+    },
+    {
+      "id": "13845156303346001842184127393",
+      "desc": "Pepeillo/hhshsh",
+      "point": "3"
+    },
+    {
+      "id": "218859915630336082346561576696",
+      "desc": "Miguel",
+      "point": "3"
+    },
+    {
+      "id": "37201596930515630337808187328",
+      "desc": "Ponle Otro",
+      "point": "4"
+    },
+    {
+      "id": "215630339501298064322600134846",
+      "desc": "Primer Tentativo Positivo",
+      "point": "1"
+    },
+    {
+      "id": "329610415630339709923165731784",
+      "desc": "Segunda Tentativa Positivo",
+      "point": "4"
+    }
+  ],
+  "negativos": [
+    {
+      "id": "1",
+      "desc": "El curso es duro",
+      "point": 1
+    },
+    {
+      "id": "299156303231473544155304814683",
+      "desc": "Milangdsfgsdf",
+      "point": "4"
+    },
+    {
+      "id": "229017156303296708277411441607",
+      "desc": "Carlitos",
+      "point": "2"
+    },
+    {
+      "id": "96791388578615630333117771788",
+      "desc": "Valverde del camino",
+      "point": "1"
+    },
+    {
+      "id": "13069156303360823477157063485",
+      "desc": "Pablo Iglesias",
+      "point": "1"
+    },
+    {
+      "id": "59156303397099285748286781949",
+      "desc": "Primer Tentativa Negativo",
+      "point": "2"
+    }
+  ],
+  "users": [
+    {
+      "email": "mi@email.com",
+      "password": "$2a$10$7qQB7bP0Y2rg9HV6AVXAAOb25zMIcWNPqlVdeChADWS4uHPw8rPY2",
+      "user": "mi",
+      "id": 2
+    }
+  ]
+}
