@@ -3,12 +3,12 @@
     {
       "id": "1",
       "desc": "El curso es Innovadosso",
-      "point": 1
+      "point": "1"
     },
     {
       "id": "iONLPNs",
       "desc": "Giacomo6fgsdfg444",
-      "point": 4
+      "point": "4"
     },
     {
       "id": "20327156303331177619571525551",
@@ -45,7 +45,7 @@
     {
       "id": "1",
       "desc": "El curso es duro",
-      "point": 1
+      "point": "1"
     },
     {
       "id": "299156303231473544155304814683",
@@ -71,6 +71,11 @@
       "id": "59156303397099285748286781949",
       "desc": "Primer Tentativa Negativo",
       "point": "2"
+    },
+    {
+      "id": "282004670315631268632808494773",
+      "desc": "No me gusta tal cosa",
+      "point": "3"
     }
   ],
   "users": [

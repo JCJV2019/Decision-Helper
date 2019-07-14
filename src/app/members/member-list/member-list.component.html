@@ -47,6 +47,9 @@
 </div>
 
 <button (click)=consejo()>Consejo</button>
-<div>{{resultado}}</div>
+<h4>Resultado</h4>
+<span>Coeficiente Positivos: {{puntuacionP}}</span>
+<span>Coeficiente Negativos: {{puntuacionN}}</span>
+<div *ngIf="puntuacionP > puntuacionN">¡¡¡Toma la Decision!!!</div>
+<div *ngIf="puntuacionN > puntuacionP">¡¡¡NO tomes esa decision!!!</div>
 
-<!--<a [routerLink]="['/member/',itemP.id]" routerLinkAcActive="router-link-active">{{itemP.desc}}</a>-->

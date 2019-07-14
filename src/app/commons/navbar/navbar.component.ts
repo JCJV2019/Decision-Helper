@@ -2,26 +2,27 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
 
-
 @Component({
-
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
+
   @Output() public sidenavToggle = new EventEmitter();
-  public isLogged = false;
+  public isLogged: boolean;
 
-  constructor(private authService: AuthService, private router: Router){}
+  constructor(private authService: AuthService, private router: Router) {}
 
-  ngOnInit(){
+  ngOnInit() {
     this.onCheckUser();
 
   }
+
   public onLogout(): void {
     this.authService.logoutUser();
-    this.isLogged = false;
+    this.isLogged = this.authService.getLogged();
+    // this.isLogged = false;
     this.router.navigate(['/home']);
   }
 
@@ -32,6 +33,4 @@ export class NavbarComponent implements OnInit {
   public onToggleSidenav(): void {
     this.sidenavToggle.emit();
   }
-
-
 }

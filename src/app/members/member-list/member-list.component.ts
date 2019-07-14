@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 import { Positive } from 'src/app/shared/clases/positives';
 import { Negative } from 'src/app/shared/clases/negatives';
+import { MAT_AUTOCOMPLETE_DEFAULT_OPTIONS } from '@angular/material';
 
 @Component({
   selector: 'app-member-list',
@@ -20,6 +21,8 @@ export class MemberListComponent implements OnInit {
   public puntos: number;
   public valorPuntos: any;
   public resultado: string = '';
+  public puntuacionP: number = 0;
+  public puntuacionN: number = 0;
 
   public itemPData: Positive = {
     id: '',
@@ -157,11 +160,18 @@ export class MemberListComponent implements OnInit {
   }
 
   consejo() {
-  /*  this.itemsPositivos.reduce( => (valorAnterior.point, valorActual.point) {
-      return valorAnterior.point + valorActual.point;
-    });
-    let sumaPositivos = this.itemsPositivos.reduce((matriz, item) => (matriz[item.point] = matriz, item), {});
-    console.log(sumaPositivos);
-  */
+    let sumaP = 0;
+    let sumaN = 0;
+    for ( let item of this.itemsPositivos ) {
+      sumaP += parseInt(item.point, 10);
+    }
+    for ( let item of this.itemsNegativos ) {
+      sumaN += parseInt(item.point, 10);
+    }
+    const mediaP = sumaP / this.itemsPositivos.length;
+    const mediaN = sumaN / this.itemsNegativos.length;
+    this.puntuacionP = (mediaP / (sumaP + sumaN)) * 100;
+    this.puntuacionN = (mediaN / (sumaP + sumaN)) * 100;
+
   }
 }
