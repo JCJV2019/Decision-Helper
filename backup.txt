@@ -1,0 +1,55 @@
+<div class="form-group">
+  <label for="descItem">Descripción Item:</label>
+  <input type="text" class="form-control" name="descItem" #descItemField placeholder="tu concepto"
+    [(ngModel)]="descripcion">
+
+  <label>
+    <input type="radio" class="form-control" [value]="valorPuntos.O1.value" [name]="valorPuntos.O1.name"
+      [(ngModel)]="puntos">
+  </label>
+  <label>
+    <input type="radio" class="form-control" [value]="valorPuntos.O2.value" [name]="valorPuntos.O2.name"
+      [(ngModel)]="puntos">
+  </label>
+  <label>
+    <input type="radio" class="form-control" [value]="valorPuntos.O3.value" [name]="valorPuntos.O3.name"
+      [(ngModel)]="puntos">
+  </label>
+  <label>
+    <input type="radio" class="form-control" [value]="valorPuntos.O4.value" [name]="valorPuntos.O4.name"
+      [(ngModel)]="puntos">
+  </label>
+  <div>{{puntos}}</div>
+  <button (click)=addPositivo()>Añade Positivo</button>
+  <button (click)=addNegativo()>Añade Negativo</button>
+</div>
+
+<!--<button mat-button [routerLink]="['/newMember']">Nuevo cliente</button>-->
+
+<h2>Items Positivos</h2>
+<div *ngFor='let pitem of itemsPositivos'>
+  <div>
+    <input type="text" name="desc" [value]="pitem.desc" [(ngModel)]="pitem.desc">
+    <input type="number" min="1" max="4" [value]="pitem.point" [(ngModel)]="pitem.point">
+    <button (click)=editPositivo(pitem)>Editar</button>
+    <button (click)=deletePositivo(pitem.id)>Borrar</button>
+  </div>
+</div>
+
+<h2>Items Negativos</h2>
+<div *ngFor='let nitem of itemsNegativos'>
+  <div>
+      <input type="text" name="desc" [value]="nitem.desc" [(ngModel)]="nitem.desc">
+      <input type="number" min="1" max="4" [value]="nitem.point" [(ngModel)]="nitem.point">
+      <button (click)=editNegativo(nitem)>Editar</button>
+      <button (click)=deleteNegativo(nitem.id)>Borrar</button>
+  </div>
+</div>
+
+<button (click)=consejo()>Consejo</button>
+<h4>Resultado</h4>
+<span>Coeficiente Positivos: {{puntuacionP}}</span>
+<span>Coeficiente Negativos: {{puntuacionN}}</span>
+<div *ngIf="puntuacionP > puntuacionN">¡¡¡Toma la Decision!!!</div>
+<div *ngIf="puntuacionN > puntuacionP">¡¡¡NO tomes esa decision!!!</div>
+

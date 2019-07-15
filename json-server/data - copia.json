@@ -1,0 +1,38 @@
+{
+  "positivos": [
+    {
+      "id": "1",
+      "desc": "El curso es Innovadosso",
+      "point": "1",
+      "question": "AAAAAA"
+    },
+    {
+      "id": "iONLPNs",
+      "desc": "Giacomo6fgsdfg444",
+      "point": "4",
+      "question": "AAAAAA"
+    }
+  ],
+  "negativos": [
+    {
+      "id": "1",
+      "desc": "El curso es duro",
+      "point": 4,
+      "question": "AAAAAA"
+    },
+    {
+      "id": "299156303231473544155304814683",
+      "desc": "Milangdsfgsdf",
+      "point": "4",
+      "question": "AAAAAA"
+    }
+  ],
+  "users": [
+    {
+      "email": "mi@email.com",
+      "password": "$2a$10$7qQB7bP0Y2rg9HV6AVXAAOb25zMIcWNPqlVdeChADWS4uHPw8rPY2",
+      "user": "mi",
+      "id": 2
+    }
+  ]
+}
