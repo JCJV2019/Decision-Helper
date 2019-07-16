@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --aot -o",
-    "build": "ng build",
+    "build": "ng build --aot --base-href ./",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

@@ -4,12 +4,14 @@ import { HttpHeaders } from '@angular/common/http';
 import { UserInterface } from '../shared/interfaces/user-interface';
 import { map, tap, catchError } from 'rxjs/operators';
 import { Observable, throwError, BehaviorSubject } from 'rxjs';
+import { environment } from '../../environments/environment';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
+  private authURL = environment.API_URL;
   isLogged: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(this.getLogged());
 
   constructor(private http: HttpClient) {}
@@ -17,8 +19,8 @@ export class AuthService {
     'Content-Type': 'application/json'
   });
 
-  registerUser(name: string, email: string, password: string) {
-    const url_api = 'http://localhost:3000/register';
+  registerUser(email: string, password: string) {
+    const url_api = `${this.authURL}register/`;
     return this.http
       .post<UserInterface>(
         url_api,
@@ -34,8 +36,8 @@ export class AuthService {
                            return throwError(error); }));
   }
 
-  loginuser(email: string, password: string): Observable<any> {
-    const url_api = 'http://localhost:3000/login';
+  loginUser(email: string, password: string): Observable<any> {
+    const url_api = `${this.authURL}login/`;
     return this.http
       .post<UserInterface>(
         url_api,
@@ -50,10 +52,10 @@ export class AuthService {
                            return throwError(error); }));
   }
 
-/*   setUser(user: UserInterface): void {
+  setUser(user: UserInterface): void {
     let user_string = JSON.stringify(user);
     localStorage.setItem("currentUser", user_string);
-  } */
+  }
 
   setToken(token): void {
     localStorage.setItem('accessToken', token);

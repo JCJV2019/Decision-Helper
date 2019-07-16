@@ -41,7 +41,7 @@ export class MemberListComponent implements OnInit {
   };
 
   public itemP: Positive = {
-    id: this.uniqueID(),
+    id: '',
     desc: '',
     point: 0,
     question: '',
@@ -107,9 +107,6 @@ export class MemberListComponent implements OnInit {
     this.itemsNegativos = [];
     this.routeOut.navigateByUrl('/RefrshComponent', { skipLocationChange: true }).then(() =>
       this.routeOut.navigate(['/member-list']));
-
-    //this.getItemsPositivos();
-    //this.getItemsNegativos();
   }
 
   mirarQuestion() {
@@ -152,6 +149,7 @@ export class MemberListComponent implements OnInit {
 
   addPositivo() {
     if (this.verificarConcepto()) {
+      this.itemP.id = this.uniqueID();
       this.itemP.desc = this.descripcion;
       this.itemP.point = this.puntos;
       this.itemP.question = this.question;
@@ -169,6 +167,7 @@ export class MemberListComponent implements OnInit {
 
   addNegativo() {
     if (this.verificarConcepto()) {
+      this.itemN.id = this.uniqueID();
       this.itemN.desc = this.descripcion;
       this.itemN.point = this.puntos;
       this.itemN.question = this.question;

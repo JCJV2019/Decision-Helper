@@ -1,19 +1,56 @@
 {
   "positivos": [
     {
-      "id": "81615845156321309252090918237",
-      "desc": "flñledfñlwde",
-      "point": 1,
+      "id": "221563274197515430555360519204",
+      "desc": "C1",
+      "point": "1",
+      "question": "Me caso"
+    },
+    {
+      "id": "29341563274215164812205430802",
+      "desc": "C3",
+      "point": "3",
+      "question": "Me caso"
+    },
+    {
+      "id": "48115632742962163248575459148",
+      "desc": "C5",
+      "point": "2",
       "question": "Me caso"
     }
   ],
-  "negativos": [],
+  "negativos": [
+    {
+      "id": "64401563274207700070930978139",
+      "desc": "C2",
+      "point": "2",
+      "question": "Me caso"
+    },
+    {
+      "id": "61681563274257815744267767109",
+      "desc": "C4",
+      "point": "4",
+      "question": "Me caso"
+    },
+    {
+      "id": "10804415524361563274319618078",
+      "desc": "C1",
+      "point": "1",
+      "question": "Me caso"
+    }
+  ],
   "users": [
     {
       "email": "mi@email.com",
       "password": "$2a$10$7qQB7bP0Y2rg9HV6AVXAAOb25zMIcWNPqlVdeChADWS4uHPw8rPY2",
       "user": "mi",
       "id": 2
+    },
+    {
+      "email": "cjordan@gmail.com",
+      "password": "$2a$10$FMLiQW2vbTxeKD5KcIVUheynWY9advWM9lge240vFp6ybJDcqB98K",
+      "user": "cjordan",
+      "id": 3
     }
   ]
 }

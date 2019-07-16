@@ -13,8 +13,6 @@ export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   isError: boolean = false;
 
-
-
   constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) {
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
@@ -32,7 +30,7 @@ export class LoginComponent implements OnInit {
     console.log(this.loginForm.value);
 
     return this.authService
-      .loginuser(this.email.value, this.password.value)
+      .loginUser(this.email.value, this.password.value)
       .subscribe(
         data => {
 /*           this.authService.setUser(data.user); */
