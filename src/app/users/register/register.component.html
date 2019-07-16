@@ -11,13 +11,11 @@
 
       <mat-card-content fxLayout="column">
 
-        <!--
         <mat-form-field>
 
-          <input matInput placeholder="User" [formControl]="registerForm.get('user')">
+          <input matInput placeholder="User" [formControl]="registerForm.get('name')">
 
         </mat-form-field>
-        -->
 
         <mat-form-field>
 
@@ -32,7 +30,7 @@
         </mat-form-field>
       </mat-card-content>
       <mat-error
-        *ngIf="(email.invalid || password.invalid)&&(email.dirty || email.touched)">
+        *ngIf="(email.invalid || password.invalid)&&(email.dirty || email.touched)&&(name.dirty || name.touched)">
         Los campos no pueden estar vacíos
       </mat-error>
       <mat-card-actions align="end">

@@ -15,12 +15,13 @@ export class RegisterComponent implements OnInit {
 
   constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) {
     this.registerForm = this.fb.group({
+      name: ['',[Validators.required]],
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required]]
     });
   }
 
-  //get user() { return this.registerForm.get('user') };
+  get name() { return this.registerForm.get('name') };
   get email() { return this.registerForm.get('email') };
   get password() { return this.registerForm.get('password') };
 
@@ -32,7 +33,7 @@ export class RegisterComponent implements OnInit {
     console.log(this.registerForm.value);
 
     return this.authService
-      .registerUser(this.email.value, this.password.value)
+      .registerUser(this.name.value, this.email.value, this.password.value)
       .subscribe(
         data => {
           /*this.authService.setUser(data);*/

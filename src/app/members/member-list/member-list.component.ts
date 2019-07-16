@@ -25,6 +25,7 @@ export class MemberListComponent implements OnInit {
   public puntuacionN: number = 0;
   public inputQuestion = false;
   public messagePlace: string = '';
+  public semaforo: number = 2;
 
   public itemPData: Positive = {
     id: '',
@@ -257,10 +258,24 @@ export class MemberListComponent implements OnInit {
     for (let item of this.itemsNegativos) {
       sumaN += parseInt(item.point, 10);
     }
+
     const mediaP = sumaP / this.itemsPositivos.length;
     const mediaN = sumaN / this.itemsNegativos.length;
-    this.puntuacionP = (mediaP / (sumaP + sumaN)) * 100;
-    this.puntuacionN = (mediaN / (sumaP + sumaN)) * 100;
+    this.puntuacionP = parseFloat(((mediaP / (sumaP + sumaN)) * 100).toFixed(2));
+    this.puntuacionN = parseFloat(((mediaN / (sumaP + sumaN)) * 100).toFixed(2));
+
+    /*
+    if ( this.puntuacionP === NaN ) { this.puntuacionP = 0; }
+    if ( this.puntuacionN === NaN ) { this.puntuacionN = 0; }
+    */
+
+    const diferencia = this.puntuacionP - this.puntuacionN;
+    if (Math.abs(diferencia) > 1) {
+      if (diferencia > 0 ) { this.semaforo = 3; } else { this.semaforo = 1; }
+    } else {
+      this.semaforo = 2;
+    }
+
 
   }
 }
