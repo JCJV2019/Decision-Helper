@@ -1,6 +1,6 @@
 # Decision Helper by Giacomo y Carlos
 
-![Logo](https://jcjv2019.github.io/Decision-Helper/imagenes/Logo.jpg "logo")
+![Logo](https://jcjv2019.github.io/ejemploMD/imagenes/Logo.jpg "logo")
 
 Aplicación de Angular 8 para la ayuda a la toma de decisiones.
 
