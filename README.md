@@ -15,7 +15,7 @@ Se ha de introducir la pregunta o decisión a tomar
 
 ## Primeras ideas (Wareframes)
 
-![Wireframe1](https://jcjv2019.github.io/Decision-Helper/imagenes/Wireframe1.jpg "wireframe1")
+![Wireframe1](https://jcjv2019.github.io/ejemploMD/imagenes/Wireframe1.jpg "wireframe1")
 
 # Iteración 1
 
@@ -48,7 +48,7 @@ Generamos todo el routing.
 Comenzamos a trabajar en nuestro componente members-list
 haciendo una primera versión de presentación sin bootstrap:
 
-![Sin Bootstrap](https://jcjv2019.github.io/Decision-Helper/imagenes/Imagen1.jpg "Sin Bootstrap")
+![Sin Bootstrap](https://jcjv2019.github.io/ejemploMD/imagenes/Imagen1.jpg "Sin Bootstrap")
 
 Problemas: 
 
@@ -56,7 +56,7 @@ Ajustes de routing.
 Cuando volcamos el radio button, problema de funcionamiento...
 Ajustes de refresco de los inputs...
 
-![Pizarra1](https://jcjv2019.github.io/Decision-Helper/imagenes/Pizarra1.jpg "Pizarra1")
+![Pizarra1](https://jcjv2019.github.io/ejemploMD/imagenes/Pizarra1.jpg "Pizarra1")
 
 
 ## Lunes
@@ -65,7 +65,7 @@ Realizamos ajustes a la presentación obtenemos una primera versión con bootstr
 Ajustes del menu navbar y side-navbar
 Añadimos el boton de borrar la pregunta y recomenzar de nuevo
 
-![Bootstrap1](https://jcjv2019.github.io/Decision-Helper/imagenes/Imagen2.jpg "Con Bootstrap 1ª")
+![Bootstrap1](https://jcjv2019.github.io/ejemploMD/imagenes/Imagen2.jpg "Con Bootstrap 1ª")
 
 Problemas: 
 
@@ -88,8 +88,8 @@ Resolvemos el refresco de la vista con una promesa que encontramos:
 
 Esta fromesa nos permite refrescar la vista de /member-list
 
-![Final1](https://jcjv2019.github.io/Decision-Helper/imagenes/Imagen3.png "Final Bootstrap")
-![Final2](https://jcjv2019.github.io/Decision-Helper/imagenes/Imagen4.png "Final Bootstrap")
+![Final1](https://jcjv2019.github.io/ejemploMD/imagenes/Imagen3.png "Final Bootstrap")
+![Final2](https://jcjv2019.github.io/ejemploMD/imagenes/Imagen4.png "Final Bootstrap")
 
 Problemas:
 
